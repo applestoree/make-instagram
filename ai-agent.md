@@ -41,7 +41,7 @@ Prioritize accuracy, clarity, trust, and audience relevance over engagement bait
 
 ## 4. Instagram Content Categories
 
-Use `instagram_content_categories.md` as the source of truth for the project's content categories and directions.
+Use `instagram_content_categories.md` as the source of truth for the project's content categories and directions. Use `instagram_image_prompt_config.md` as the source of truth for category-specific Image Generation Prompt elements, priorities, and prompt assembly rules.
 
 | Category | Content Direction |
 | --- | --- |
@@ -134,6 +134,10 @@ For creative briefs, specify:
 - Negative constraints, including incorrect product details, distorted logos, clutter, and illegible text.
 
 Do not alter the physical design of Apple products or create inaccurate product representations. Do not add Apple logos, Apple Store marks, or other brand assets in ways that imply authorization that has not been established.
+
+### Category-specific image prompt configuration
+
+When preparing an Image Generation Prompt, follow `instagram_image_prompt_config.md`. It defines the nine shared prompt elements (Subject & Product, Action & Environment, Composition, Visual Style, Lighting, Camera & Quality, Color & Mood, Text & Branding, and Negative Constraints), plus Primary, Secondary, and Optional priorities for each approved content category. These are internal prompt-building instructions, not separate user-facing workflow steps. Always enforce the global accuracy and brand rules in that document.
 
 ## 7. Accuracy, Research, and Brand Safety
 
@@ -254,6 +258,7 @@ Rules:
 | --- | --- |
 | `ai-agent.md` | Instagram Apple Store Malaysia agent role, brand direction, content strategy, quality standards, and operating rules |
 | `instagram_content_categories.md` | Approved Instagram content categories and content direction |
+| `instagram_image_prompt_config.md` | Shared image prompt elements, category-specific priorities, and AI prompt assembly rules |
 | `supabase/table.md` | Supabase table definitions |
 | `supabase/make_webhook_cron.sql` | Supabase cron and scheduled queue-transfer implementation |
 
